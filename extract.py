@@ -1,7 +1,7 @@
 import sys
 from nltk.corpus import wordnet as wn
 import matcher
-import Tree
+import RoledTree
 
 invalidrel=("aux","cop")
 validpos = ("verb","VB","VBN","VBD","VBG","VBP","VBZ","noun","NN", "NNS", "NNP", "NNPS","adjective","JJ", "JJS", "JJR","adverb","RB", "RBS", "RBR")
@@ -60,7 +60,7 @@ for line in parsed_file:
         contents = line.strip().split('\t')
         nodes = ['0/null/null/null/0']
         nodes.extend(contents)
-        tree = Tree.Tree(nodes)
+        tree = RoledTree.Tree(nodes)
         tree.add_level(tree.sentence[0], 0)
 
         sent = ['null']
