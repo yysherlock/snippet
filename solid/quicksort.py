@@ -1,6 +1,7 @@
 import unittest
 
 def my_quicksort(array):
+    """ in-place swap, memory O(1) """
     if len(array) <= 1: return array
     pivot = array[0]
     i = 1 # [i:] stores elems >= pivot
@@ -12,6 +13,7 @@ def my_quicksort(array):
     return my_quicksort(array[0:i-1]) + [pivot] + my_quicksort(array[i:])
 
 def simple_quicksort(array):
+    """ memory O(n) """
     less = []; greater = []
     if len(array) <= 1: return array
     pivot = array.pop()
