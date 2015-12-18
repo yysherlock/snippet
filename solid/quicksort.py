@@ -1,7 +1,6 @@
 import unittest
 
 def my_quicksort(array):
-    # assert len(array) > 0, "The array is empty. "
     if len(array) <= 1: return array
     pivot = array[0]
     i = 1 # [i:] stores elems >= pivot
