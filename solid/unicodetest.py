@@ -1,3 +1,5 @@
+#from __future__ import unicode_literals # consistent with python 3, use Unicode to represent characters
+
 print '\xd6\xd0'.decode('gbk')
 print '\xd6\xd0'.decode('gbk').encode('utf-8')
 
@@ -11,3 +13,6 @@ print '\xe4\xb8\xad'
 print '\xe4\xb8\xad'.decode('utf-8')
 print '\xe4\xb8\xad'.decode('utf-8').encode('utf-8')
 #print '\xe4\xb8\xad'.decode('')
+
+#s = "".decode('utf-8')
+#print s
