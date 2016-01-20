@@ -1,0 +1,4 @@
+0 08 * * * /bin/rm task.json state.list
+0 10 * * * python ~/todo/gentask.py
+0,30 06-23 * * * python ~/todo/update.py
+59 23 * * * python ~/todo/tar.py

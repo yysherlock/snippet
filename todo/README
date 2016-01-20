@@ -1,0 +1,16 @@
+
+# Simple TODO tool for daily use
+
+* Remove `task.json` and `state.list` every morning at 8:00 a.m.
+  Ｇenerate `task.json` file from terminal input or `todo.list`, then generate `state.list`.
+  To achieve this, we auto run `gentask.py` everyday at 10:00 a.m. 
+  You'd better manually modified your `todo.list` before 10:00 a.m. everyday.
+
+* When you finished some tasks, you can manually change their states into `done` in `state.list` file.
+  The program will auto update `task.json` file every 30 minutes according to your `state.list` file. (achieved by crontab)
+  
+* Every night, at 23:59, we tar the tasks into `done.list` and `backup.list` according to the state of them.
+  `done.list` collects all the finished tasks up to now.
+  `backup.list` collects all the unfinished tasks up to now.
+  We backup these two files every week.
+
